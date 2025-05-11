@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Koochesh Away | مهاجرت تحصیلی</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --main-gold: #d4af37;
+      --hover-gold: #c89e2b;
+      --bg-dark: #0f0f0f;
+      --bg-light: #1a1a1a;
+      --text-light: #f1f1f1;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Vazirmatn', sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-light);
+      scroll-behavior: smooth;
+      line-height: 1.8;
+      font-size: 1.05rem;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    nav {
+      background-color: var(--bg-light);
+      padding: 1rem;
+      border-bottom: 1px solid #222;
+    }
+    nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: auto;
+    }
+    nav img {
+      max-width: 140px;
+      height: auto;
+      transition: transform 0.2s ease;
+    }
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: var(--main-gold); }
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 5rem 2rem;
+      background: linear-gradient(to right, #1b1b1b, #000);
+    }
+    .hero h1 {
+      font-size: 3rem;
+      color: var(--main-gold);
+      margin-bottom: 1rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+    .hero p {
+      max-width: 620px;
+      font-size: 1.2rem;
+      line-height: 2;
+      opacity: 0.9;
+    }
+    .section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 4rem 2rem;
+    }
+    .contact form {
+      background: #1b1b1b;
+      padding: 2.5rem;
+      border-radius: 16px;
+      box-shadow: 0 0 25px rgba(255,255,255,0.05);
+      max-width: 600px;
+      margin: auto;
+      position: relative;
+    }
+    label {
+      display: block;
+      margin: 1rem 0 0.5rem;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 1rem;
+      background: #121212;
+      border: 1px solid #2a2a2a;
+      color: #eee;
+      border-radius: 10px;
+      font-size: 1rem;
+    }
+    #phone-error {
+      color: #ff5252;
+      font-size: 0.9rem;
+      margin-top: 5px;
+      display: none;
+    }
+    button {
+      margin-top: 1.5rem;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      background: var(--main-gold);
+      color: #000;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      transition: background 0.3s ease;
+    }
+    button:hover { background: var(--hover-gold); }
+    footer {
+      background: #0c0c0c;
+      color: #aaa;
+      text-align: center;
+      padding: 3rem 1rem;
+      font-size: 0.95rem;
+      border-top: 1px solid #222;
+    }
+  
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    padding: 1rem;
+  }
+  .dropdown-content {
+    position: static;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+  }
+  .dropdown-content a {
+    padding: 0.5rem 0;
+  }
+  nav .container {
+    flex-direction: column;
+  }
+  nav a {
+    margin: 0.4rem 0;
+  }
+  nav img {
+    margin-bottom: 1rem;
+  }
+}
+
+
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--main-gold);
+}
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1001;
+  }
+  .menu {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .menu.active {
+    display: flex;
+  }
+}
+
+</style>
+</head>
+<body>
+  <nav>
+  <div class="container">
+
+<div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <img src="https://i.ibb.co/hx0PmScj/Koochesh-Away-Transparent-1.png" id="logo" alt="Koochesh Away Logo">
+    <div class="menu">
+      <a href="#services">خدمات</a>
+      <a href="#why">چرا ما؟</a>
+      <a href="#steps">مراحل</a>
+      <div class="dropdown">
+        <a href="#countries">کشورها ▾</a>
+        <div class="dropdown-content">
+          <a href="#italy">ایتالیا</a>
+          <a href="#germany">آلمان</a>
+          <a href="#france">فرانسه</a>
+          <a href="#canada">کانادا</a>
+        </div>
+      </div>
+      <a href="#contact">تماس</a>
+    </div>
+  </div>
+
+<style>
+  .menu {
+    display: flex;
+    align-items: center;
+  }
+  .dropdown {
+    position: relative;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 2.5rem;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 10px;
+    min-width: 140px;
+    z-index: 99;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  }
+  .dropdown-content a {
+    display: block;
+    padding: 0.8rem 1rem;
+    color: #ccc;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .dropdown-content a:hover {
+    background-color: #2a2a2a;
+    color: var(--main-gold);
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    padding: 1rem;
+  }
+  .dropdown-content {
+    position: static;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+  }
+  .dropdown-content a {
+    padding: 0.5rem 0;
+  }
+  nav .container {
+    flex-direction: column;
+  }
+  nav a {
+    margin: 0.4rem 0;
+  }
+  nav img {
+    margin-bottom: 1rem;
+  }
+}
+
+
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--main-gold);
+}
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1001;
+  }
+  .menu {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .menu.active {
+    display: flex;
+  }
+}
+
+</style></nav>
+
+  <section class="hero">
+    <h1>مهاجرت تحصیلی به ایتالیا و اروپا</h1>
+    <p>با Koochesh Away مسیر مهاجرت تحصیلی خود را مطمئن، سریع و با پشتیبانی کامل آغاز کنید. تخصص ما، آینده شماست.</p>
+  </section>
+
+  <section class="section contact" id="contact">
+    <h2>فرم درخواست مشاوره رایگان</h2>
+    <form>
+      <label>نام شما</label>
+      <input type="text" placeholder="مثلاً: علی رضایی">
+      <label>شماره تماس</label>
+      <input type="text" id="phone" placeholder="مثلاً: 09123456789">
+      <div id="phone-error">❌ شماره تماس معتبر نیست. لطفاً مانند 09123456789 وارد کنید.</div>
+      <label>پیام شما</label>
+      <textarea rows="4" placeholder="سوال یا درخواست شما..."></textarea>
+      <button type="submit">ارسال درخواست</button>
+    </form>
+  </section>
+
+  <footer>
+    طراحی شده توسط تیم Koochesh Away | ارتباط با ما در تلگرام: @koochesh_admin
+  </footer>
+
+  <script>
+    // افکت موس روی لوگو
+    document.addEventListener("mousemove", (e) => {
+      const logo = document.getElementById("logo");
+      const x = (e.clientX / window.innerWidth - 0.5) * 20;
+      const y = (e.clientY / window.innerHeight - 0.5) * 20;
+      logo.style.transform = `translate(${x}px, ${y}px)`;
+    });
+
+    // فرم
+    document.querySelector('form').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const name = document.querySelector('input[placeholder*="علی"]').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const message = document.querySelector('textarea').value.trim();
+      const phoneError = document.getElementById('phone-error');
+
+      // اعتبارسنجی شماره
+      if (!/^09\d{9}$/.test(phone)) {
+        phoneError.style.display = 'block';
+        return;
+      } else {
+        phoneError.style.display = 'none';
+      }
+
+      if (!name || !phone || !message) {
+        alert('لطفاً تمام فیلدها را کامل پر کنید');
+        return;
+      }
+
+      const token = '7986643877:AAG4R8aphJqDLeyIPufZ5cirrZxU-T2pA4o';
+      const chat_id = '139955631';
+
+      fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          chat_id,
+          text: `📥 فرم مشاوره جدید:
+👤 نام: ${name}
+📞 تماس: ${phone}
+📝 پیام: ${message}`
+        })
+      })
+      .then(res => {
+        if (!res.ok) throw new Error();
+        alert('✅ درخواست شما با موفقیت ارسال شد. منتظر تماس ما باشید.');
+        document.querySelector('form').reset();
+      })
+      .catch(() => {
+        alert('❌ خطا در ارسال. اتصال اینترنت یا بات تلگرام را بررسی کنید.');
+      });
+    });
+  </script>
+
+<script>
+  function toggleMenu() {
+    document.querySelector('.menu').classList.toggle('active');
+  }
+</script>
+
+</body>
+</html>
