@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Koochesh Away | مهاجرت تحصیلی</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --main-gold: #d4af37;
+      --hover-gold: #c89e2b;
+      --bg-dark: #0f0f0f;
+      --bg-light: #1a1a1a;
+      --text-light: #f1f1f1;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Vazirmatn', sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-light);
+      scroll-behavior: smooth;
+      line-height: 1.8;
+      font-size: 1.05rem;
+      -webkit-font-smoothing: antialiased;
+    }
+    nav {
+      background-color: var(--bg-light);
+      padding: 1rem;
+      border-bottom: 1px solid #222;
+    }
+    nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: auto;
+    }
+    nav img {
+      max-width: 140px;
+      height: auto;
+    }
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: var(--main-gold); }
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 5rem 2rem;
+      background: linear-gradient(to right, #1b1b1b, #000);
+    }
+    .hero h1 {
+      font-size: 3rem;
+      color: var(--main-gold);
+      margin-bottom: 1rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+    .hero p {
+      max-width: 620px;
+      font-size: 1.2rem;
+      line-height: 2;
+      opacity: 0.9;
+    }
+    .section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 4rem 2rem;
+    }
+    .section h2 {
+      text-align: center;
+      color: var(--main-gold);
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
+    }
+    .section ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 0;
+      list-style: none;
+    }
+    .section ul li {
+      background: linear-gradient(135deg, #1c1c1c, #141414);
+      padding: 1.5rem;
+      border-radius: 14px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+      line-height: 1.9;
+      transition: all 0.3s ease-in-out;
+    }
+    .section ul li:hover {
+      transform: translateY(-6px);
+      background-color: #222;
+    }
+    .contact form {
+      background: #1b1b1b;
+      padding: 2.5rem;
+      border-radius: 16px;
+      box-shadow: 0 0 25px rgba(255,255,255,0.05);
+      max-width: 600px;
+      margin: auto;
+    }
+    label { display: block; margin: 1rem 0 0.5rem; }
+    input, textarea {
+      width: 100%;
+      padding: 1rem;
+      background: #121212;
+      border: 1px solid #2a2a2a;
+      color: #eee;
+      border-radius: 10px;
+      font-size: 1rem;
+    }
+    button {
+      margin-top: 1.5rem;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      background: var(--main-gold);
+      color: #000;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      transition: background 0.3s ease;
+    }
+    button:hover { background: var(--hover-gold); }
+    footer {
+      background: #0c0c0c;
+      color: #aaa;
+      text-align: center;
+      padding: 3rem 1rem;
+      font-size: 0.95rem;
+      border-top: 1px solid #222;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <img src="https://i.ibb.co/hx0PmScj/Koochesh-Away-Transparent-1.png" alt="Koochesh Away Logo">
+      <div>
+        <a href="#services">خدمات</a>
+        <a href="#why">چرا ما؟</a>
+        <a href="#steps">مراحل مهاجرت</a>
+        <a href="#countries">کشورها</a>
+        <a href="#contact">تماس با ما</a>
+      </div>
+    </div>
+  </nav>
+  <section class="hero">
+    <h1>مهاجرت تحصیلی به ایتالیا و اروپا</h1>
+    <p>با Koochesh Away مسیر مهاجرت تحصیلی خود را مطمئن، سریع و با پشتیبانی کامل آغاز کنید. تخصص ما، آینده شماست.</p>
+  </section>
+  <section class="section contact" id="contact">
+    <h2>فرم درخواست مشاوره رایگان</h2>
+    <form>
+      <label>نام شما</label>
+      <input type="text" placeholder="مثلاً: علی رضایی">
+      <label>شماره تماس</label>
+      <input type="text" placeholder="مثلاً: 09123456789">
+      <label>پیام شما</label>
+      <textarea rows="4" placeholder="سوال یا درخواست شما..."></textarea>
+      <button type="submit">ارسال درخواست</button>
+    </form>
+  </section>
+  <footer>
+    طراحی شده توسط تیم Koochesh Away | ارتباط با ما در تلگرام: @koochesh_admin
+  </footer>
+  <script>
+    document.querySelector('form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = document.querySelector('input[placeholder*="نام"]').value.trim();
+      const phone = document.querySelector('input[placeholder*="091"]').value.trim();
+      const message = document.querySelector('textarea').value.trim();
+      if (!name || !phone || !message) {
+        alert('لطفاً تمام فیلدها را پر کنید');
+        return;
+      }
+      if (!/^09\d{9}$/.test(phone)) {
+        alert('شماره تماس معتبر نیست (باید با 09 شروع شود و 11 رقم باشد)');
+        return;
+      }
+      const token = '7986643877:AAG4R8aphJqDLeyIPufZ5cirrZxU-T2pA4o';
+      const chat_id = '139955631';
+      fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          chat_id: chat_id,
+          text: `📥 فرم مشاوره جدید:
+👤 نام: ${name}
+📞 تماس: ${phone}
+📝 پیام: ${message}`
+        })
+      })
+      .then(res => {
+        if (res.ok) {
+          alert('✅ پیام با موفقیت ارسال شد. به زودی با شما تماس می‌گیریم.');
+          document.querySelector('form').reset();
+        } else {
+          alert('❌ خطا در ارسال پیام. لطفاً دوباره تلاش کنید.');
+        }
+      })
+      .catch(() => {
+        alert('❌ ارتباط با سرور برقرار نشد. لطفاً اتصال اینترنت را بررسی کنید.');
+      });
+    });
+  </script>
+</body>
+</html>
