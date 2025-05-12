@@ -84,6 +84,7 @@
     button:hover { transform: scale(1.05); background: #c89e2b; }
   </style>
 </head>
+<body>
 <!-- Header -->
 <div style="background: linear-gradient(to bottom, #1a1a1a, #121212); padding: 2rem 2rem 1.5rem; border-bottom: 2px solid var(--main-gold); display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border-radius: 0 0 20px 20px; text-align: center;">
   <img src="https://i.ibb.co/hx0PmScj/Koochesh-Away-Transparent-1.png" alt="Koochesh Away Logo" style="max-height: 80px; margin-bottom: 1rem;">
@@ -134,13 +135,14 @@
   </form>
 </section>
 <script>
- document.querySelector('form').addEventListener('submit', function (e) {
+document.querySelector('form').addEventListener('submit', function (e) {
   e.preventDefault();
 
   const name = document.getElementById('name').value.trim();
-  const phone = document.getElementById('phone').value.replace(/\D/g, ''); // این خط مهمه
+  const phone = document.getElementById('phone').value.replace(/\D/g, '');
   const message = document.querySelector('textarea').value.trim();
   const phoneError = document.getElementById('phone-error');
+
   if (!/^09\d{9}$/.test(phone)) {
     phoneError.style.display = 'block';
     return;
@@ -155,8 +157,10 @@
 
   fetch("https://script.google.com/macros/s/AKfycbzzNYzlavggeDoQIk0_5Rm3OmzlHYeQ1U54vZb4cx97fnfYa8cWBAVVRFQ765UkzZ7F8g/exec", {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ name, phone, message })
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded"
+    },
+    body: `name=${encodeURIComponent(name)}&phone=${encodeURIComponent(phone)}&message=${encodeURIComponent(message)}`
   })
   .then(res => {
     if (!res.ok) throw new Error();
