@@ -135,7 +135,7 @@
   </form>
 </section>
 <script>
-document.querySelector('form').addEventListener('submit', function (e) {
+  document.querySelector('form').addEventListener('submit', function (e) {
   e.preventDefault();
 
   const name = document.getElementById('name').value.trim();
@@ -157,20 +157,18 @@ document.querySelector('form').addEventListener('submit', function (e) {
 
   fetch("https://script.google.com/macros/s/AKfycbzzNYzlavggeDoQIk0_5Rm3OmzlHYeQ1U54vZb4cx97fnfYa8cWBAVVRFQ765UkzZ7F8g/exec", {
     method: "POST",
-    headers: {
-      "Content-Type": "application/x-www-form-urlencoded"
-    },
     body: `name=${encodeURIComponent(name)}&phone=${encodeURIComponent(phone)}&message=${encodeURIComponent(message)}`
   })
-  .then(res => {
-    if (!res.ok) throw new Error();
-    alert('✅ درخواست شما با موفقیت ارسال شد. منتظر تماس ما باشید.');
+  .then(response => {
+    if (!response.ok) throw new Error();
+    alert("✅ درخواست با موفقیت ارسال شد");
     document.querySelector('form').reset();
   })
   .catch(() => {
-    alert('❌ ارسال با خطا مواجه شد. لطفاً دوباره تلاش کنید یا به آیدی تلگرام ما پیام دهید: @koochesh_admin');
+    alert("❌ ارسال با خطا مواجه شد. لطفاً دوباره تلاش کنید یا به آیدی تلگرام ما پیام دهید: @koochesh_admin");
   });
 });
+
 </script>
 <footer>
   <img src="https://i.ibb.co/hx0PmScj/Koochesh-Away-Transparent-1.png" alt="Logo" style="max-height: 40px; margin-bottom: 1rem;">
